@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: rgb(42, 116, 42);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 70%;
+            margin: 4%;
+            position: relative;
+        }
+
+        .container-top {
+            background-color: rgb(21, 58, 21);
+            color: white;
+            display: flex;
+            padding: 2%;
+            justify-content: space-between;
+        }
+
+        .boxt {
+            display: flex;
+            gap: 5px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: black;
+            padding: 8px;
+            font-size: 2em;
+            height: 70%;
+            border-radius: 10px;
+        }
+
+        .container-btm {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bubble {
+            background-color: rgb(246, 250, 13);
+            width: 35px;
+            height: 35px;
+            margin: 5px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        button {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            height: 30%;
+            width: 20%;
+            font-size: 4em;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-top">
+            <div class="boxt">
+                <h1>Hit:- </h1>
+                <div class="box" id="hit">00</div>
+            </div>
+            <div class="boxt">
+                <h1>Timer:- </h1>
+                <div class="box" id="timer">00</div>
+            </div>
+            <div class="boxt">
+                <h1>Score:- </h1>
+                <div class="box" id="score">00</div>
+            </div>
+        </div>
+        <div class="container-btm">
+
+        </div>
+
+        <div class="container-detail">
+
+            <button onclick="start()">Start</button>
+        </div>
+    </div>
+    <script src="bubble.js"></script>
+</body>
+
+</html>
